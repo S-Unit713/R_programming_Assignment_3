@@ -1,6 +1,6 @@
 best <- function(state, outcome){
-        outcome <- read.csv("outcome-of-care-measures.csv", colClasses="character")
-        st<- unique(outcome[,7])
+        out_measure <- read.csv("outcome-of-care-measures.csv", colClasses="character")
+        st<- unique(out_measure[,7])
         state.inv<- NULL
         out.inv <- NULL
         for(i in 1:length(st)){
