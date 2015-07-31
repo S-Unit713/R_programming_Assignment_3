@@ -25,8 +25,8 @@ best <- function(state, outcome){
         
         
         s<- split(out_measure,out_measure[,7])
+        min <- min(s[[state]]$col_prbm,na.rm= TRUE)
+        pos <- match(min,s[[state]]$col_prbm)
+        s[[state]]$col_prbm[pos]
         
-        Hosp <- function(s[state]){
-                
-        }
 }
