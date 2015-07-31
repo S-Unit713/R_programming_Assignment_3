@@ -1,5 +1,5 @@
 best <- function(state, outcome){
-        out_measure <- read.csv("outcome-of-care-measures.csv", colClasses="character")
+        out_measure <- read.csv("outcome-of-care-measures.csv", colClasses="character",header = TRUE)
         st<- unique(out_measure[,7])
         state.inv<- NULL
         out.inv <- NULL
@@ -19,4 +19,14 @@ best <- function(state, outcome){
         }
         if(out.inv==FALSE) stop("invalid outcome")
         
+        if(i==1) col_prbm <- "Hospital.30.Day.Death..Mortality..Rates.from.Heart.Attack"
+        if(i==2) col_prbm <- "Hospital.30.Day.Death..Mortality..Rates.from.Pneumonia"
+        if(i==3) col_prbm <- "Hospital.30.Day.Death..Mortality..Rates.from.Heart.Failure"
+        
+        
+        s<- split(out_measure,out_measure[,7])
+        
+        Hosp <- function(s[state]){
+                
+        }
 }
